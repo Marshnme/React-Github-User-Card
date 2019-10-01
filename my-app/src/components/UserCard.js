@@ -1,4 +1,11 @@
 import React from 'react';
+import styled from "styled-components"
+
+const ImgDiv = styled.img`
+    width:20%;
+    height:50%;
+`;
+
 
 
 function UserCard(props){
@@ -8,7 +15,10 @@ function UserCard(props){
             
                 <div>
                     <h1>{props.user.name}</h1>
-                    <img src={props.user.avatar_url} alt="user"></img>
+                    <div>
+                        <ImgDiv src={props.user.avatar_url} alt="user"></ImgDiv>
+                    </div>
+                    
                     <p>{props.user.bio}</p>
                 </div>
         
